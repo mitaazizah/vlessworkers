@@ -816,7 +816,7 @@ ${วเลสSec}
   <html>
   ${htmlHead}
   <body>
-  <pre style='background-color: transparent; border: none;'>
+  <pre style='background-color: transparent; border: none; margin-left:0;'>
 	<b style='font-size: 30px;'>Selamat Datang!</b>
 	<b></b>
 	<b></b>
