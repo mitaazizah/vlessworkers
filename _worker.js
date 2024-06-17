@@ -711,7 +711,7 @@ function getวเลสConfig(userIDs, hostName) {
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + พร็อกซีไอพี + commonUrlPart;
 		return `<pre>VLESS ACCOUNT INFORMATION
 ${hashSeparator}\n
-DOMAIN       : ${hostName)
+DOMAIN       : ${hostName}
 ISP          : Belnet
 COUNTRY      : Singapore
 USER ID      : ${userID}
