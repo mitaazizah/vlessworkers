@@ -709,7 +709,7 @@ function getวเลสConfig(userIDs, hostName) {
 	const output = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + พร็อกซีไอพี + commonUrlPart;
-		return `<pre>VLESS ACCOUNT INFORMATION
+		return `VLESS ACCOUNT INFORMATION
 ${hashSeparator}\n
 DOMAIN       : ${hostName}
 ISP          : Belnet
@@ -721,19 +721,19 @@ PORT NTLS    : 80
 SECURITY     : auto
 NETWORK      : (WS)
 PATH         : /vless-ws
-WILCARD      : isi.bug.com.sg.ryo.biz.id
+WILCARD      : isi.bug.com.${hostName}
 MUX          : Off
 UDP          : Not Support
 ${hashSeparator}\n
 VLESS WS SSL
 ---------------------------------------------------------------
 ${วเลสMain}
-<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy วเลสMain</button>
+<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy TLS:433</button>
 ---------------------------------------------------------------
 VLESS WS NTLS
 ---------------------------------------------------------------
 ${วเลสSec}
-<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy วเลสSec</button>
+<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy NTLS:80</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
@@ -745,14 +745,14 @@ ${วเลสSec}
 	// HTML Head with CSS and FontAwesome library
 	const htmlHead = `
   <head>
-	<title>EDtunnel: วเลส configuration</title>
-	<meta name='description' content='This is a tool for generating วเลส protocol configurations. Give us a star on GitHub https://github.com/3Kmfi6HP/EDtunnel if you found it useful!'>
-	<meta name='keywords' content='EDtunnel, cloudflare pages, cloudflare worker, severless'>
+	<title>VLESS WORKER BY SSHAXOR</title>
+	<meta name='description' content='This is a tool for generating วเลส protocol configurations. Give us a star on GitHub https://github.com/mitaazizah/vlessworkers if you found it useful!'>
+	<meta name='keywords' content='sshaxor, cloudflare pages, cloudflare worker, severless'>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<meta property='og:site_name' content='EDtunnel: วเลส configuration' />
+	<meta property='og:site_name' content='vlessworkers Configuration' />
 	<meta property='og:type' content='website' />
-	<meta property='og:title' content='EDtunnel - วเลส configuration and subscribe output' />
-	<meta property='og:description' content='Use cloudflare pages and worker severless to implement วเลส protocol' />
+	<meta property='og:title' content='SSHAXOR - Website VPN Premium' />
+	<meta property='og:description' content='Use cloudflare pages and worker severless to implement asd' />
 	<meta property='og:url' content='https://${hostName}/' />
 	<meta property='og:image' content='https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(`วเลส://${userIDs.split(",")[0]}@${hostName}${commonUrlPart}`)}' />
 	<meta name='twitter:card' content='summary_large_image' />
